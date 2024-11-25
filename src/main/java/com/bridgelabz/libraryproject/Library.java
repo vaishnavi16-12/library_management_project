@@ -27,6 +27,11 @@ public class Library {
         members.add(member);
         System.out.println("Member Registrated : "+ member.getName());
     }
+    public  void removeMember( Member member){
+        members.remove(member);
+        System.out.println("Member removed : "+ member.getName());
+    }
+
 
 
 }

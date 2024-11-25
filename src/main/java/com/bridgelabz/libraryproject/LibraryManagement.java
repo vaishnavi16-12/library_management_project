@@ -15,5 +15,6 @@ public class LibraryManagement {
 
         Member member1 = new Member("M1","Vaishnavi","edfw35fg st","15465768");
         library.registerMember(member1);
+        library.removeMember(member1);
     }
 }
