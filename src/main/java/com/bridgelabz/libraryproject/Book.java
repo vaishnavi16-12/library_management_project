@@ -55,6 +55,11 @@ public class Book {
         isAvailable = available;
     }
 
+    public void updateAvailability(boolean status){
+        this.isAvailable = status;
+
+    }
+
     @Override
     public String toString() {
         return "Book{" +
