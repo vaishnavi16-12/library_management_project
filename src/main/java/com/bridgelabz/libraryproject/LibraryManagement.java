@@ -12,5 +12,7 @@ public class LibraryManagement {
         Book book2 =new Book ("1980", "George orwell", "13435t4er", 1949);
         library.addBook(book1);
         library.addBook(book2);
+
+        library.removeBook(book2);
     }
 }

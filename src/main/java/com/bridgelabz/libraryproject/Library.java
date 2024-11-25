@@ -23,6 +23,10 @@ public class Library {
         books.add(book);
         System.out.println("Book added: "+ book.getTitle());
     }
+    public  void removeBook( Book book){
+        books.remove(book);
+        System.out.println("Book removed: "+ book.getTitle());
+    }
 
 
 }
