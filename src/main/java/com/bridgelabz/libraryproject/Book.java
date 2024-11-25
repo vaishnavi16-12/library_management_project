@@ -7,12 +7,12 @@ public class Book {
     private int publicationYear;
     private boolean isAvailable;
 
-    public Book(String title, String author, String ISBN, int publicationYear, boolean isAvailable) {
+    public Book(String title, String author, String ISBN, int publicationYear) {
         this.title = title;
         this.author = author;
         this.ISBN = ISBN;
         this.publicationYear = publicationYear;
-        this.isAvailable = isAvailable;
+        this.isAvailable = true;
     }
 
     public String getTitle() {

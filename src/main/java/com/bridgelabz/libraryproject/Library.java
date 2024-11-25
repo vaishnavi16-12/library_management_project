@@ -11,7 +11,7 @@ public class Library {
     private List<Member> members;
     private List<Librarian> librarians;
 
-    public Library(String name, String address, List<Book> books, List<Member> members, List<Librarian> librarians) {
+    public Library(String name, String address) {
         this.name = name;
         this.address = address;
         this.books = new ArrayList<>();
