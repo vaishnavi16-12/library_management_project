@@ -54,6 +54,17 @@ public class Library {
 
             }
         }
-        return  result;
+        return result;
+    }
+
+    public List<Book> listAvailableBooks() {
+        List<Book> availableBook = new ArrayList<>();
+        for (Book book : books) {
+            if (book.isAvailable()) {
+                availableBook.add(book);
+            }
+        }
+        return availableBook;
     }
 }
+
