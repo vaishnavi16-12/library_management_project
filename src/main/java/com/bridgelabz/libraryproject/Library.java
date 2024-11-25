@@ -34,16 +34,26 @@ public class Library {
         System.out.println("Member removed : " + member.getName());
     }
 
-    public List<Book> searchBook (String title) {
-     List<Book> result = new ArrayList<>();
-     for (Book book :books){
-         if(book.getTitle().equalsIgnoreCase(title)){
-             result.add(book);
+    public List<Book> searchBook(String title) {
+        List<Book> result = new ArrayList<>();
+        for (Book book : books) {
+            if (book.getTitle().equalsIgnoreCase(title)) {
+                result.add(book);
 
-         }
+            }
+        }
+        return result;
     }
-     return  result;
-}
+
+    public List<Book> searchBookAuthor(String author) {
+        List<Book> result = new ArrayList<>();
+        for (Book book : books) {
+            if (book.getAuthor().equalsIgnoreCase(author)) {
+                result.add(book);
 
 
+            }
+        }
+        return  result;
+    }
 }
