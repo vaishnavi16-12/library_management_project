@@ -54,4 +54,16 @@ public class Librarian {
                 ", contactNumber=" + contactNumber +
                 '}';
     }
+
+
+    public void issueBook(Book book, Member member){
+       if(book.isAvailable()){
+           member.borrowBook(book);
+           System.out.println("Librarian " +name+ " issued the book " +book.getTitle()+ "to"+member.getName());
+
+       }else {
+           System.out.println("The book \"" + book.getTitle() + "\" is not available for issuing ");
+
+       }
+    }
 }

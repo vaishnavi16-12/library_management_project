@@ -39,6 +39,10 @@ public class LibraryManagement {
              System.out.println(book);
          }
 
+         Librarian librarian =new Librarian("L11", "Messy", "messy@3w56331", "907212665");
+         librarian.issueBook(book1, member1);
+         librarian.issueBook(book2,member1);
+
     }
 
 }
