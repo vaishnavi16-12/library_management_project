@@ -70,14 +70,18 @@ public class Member {
         }
     }
 
-        public void returnBook(Book book ){
-            if ( borrowedBook.remove(book)){
+        public void returnBook(Book book ) {
+            if (borrowedBook.remove(book)) {
                 book.updateAvailability(true);
-                System.out.println(name +   "returned :" + book.getTitle());
+                System.out.println(name + "returned :" + book.getTitle());
 
-            }else {
-                System.out.println("This book was not borrowed by "+ name);
+            } else {
+                System.out.println("This book was not borrowed by " + name);
 
+            }
+        }
+            public List<Book> listBorrowedBook(){
+                return borrowedBook;
+            }
     }
-    }
-}
+

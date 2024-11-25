@@ -1,6 +1,8 @@
 package com.bridgelabz.libraryproject;
 
 
+import java.util.List;
+
 public class LibraryManagement {
     public static void main(String[] args) {
         System.out.println("Welcome to library management project ");
@@ -21,5 +23,22 @@ public class LibraryManagement {
 
         member1.returnBook( book1);
 
+
+        System.out.println("\nBorrowed Book: ");
+        List<Book> borrowedBook = member1.listBorrowedBook();
+
+        for (Book book : borrowedBook){
+            System.out.println(book);
+
+        }
+        member1.returnBook(book1);
+
+        System.out.println("\nBorrowed Books After return :");
+        borrowedBook= member1.listBorrowedBook();
+         for (Book book : borrowedBook){
+             System.out.println(book);
+         }
+
     }
+
 }
