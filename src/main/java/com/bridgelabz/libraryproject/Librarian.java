@@ -56,14 +56,22 @@ public class Librarian {
     }
 
 
-    public void issueBook(Book book, Member member){
-       if(book.isAvailable()){
-           member.borrowBook(book);
-           System.out.println("Librarian " +name+ " issued the book " +book.getTitle()+ "to"+member.getName());
+    public void issueBook(Book book, Member member) {
+        if (book.isAvailable()) {
+            member.borrowBook(book);
+            System.out.println("Librarian " + name + " issued the book " + book.getTitle() + "to" + member.getName());
 
-       }else {
-           System.out.println("The book \"" + book.getTitle() + "\" is not available for issuing ");
+        } else {
+            System.out.println("The book \"" + book.getTitle() + "\" is not available for issuing ");
 
-       }
+        }
+    }
+
+
+    public void receivedReturnBook(Book book, Member member){
+        member.returnBook(book);
+        System.out.println("Librarian " + name + " received the returned book: " + book.getTitle() + " from " + member.getName());
+
+
     }
 }

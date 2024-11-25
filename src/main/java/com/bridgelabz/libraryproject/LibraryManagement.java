@@ -43,6 +43,9 @@ public class LibraryManagement {
          librarian.issueBook(book1, member1);
          librarian.issueBook(book2,member1);
 
+
+         librarian.receivedReturnBook(book1, member1);
+             librarian.issueBook(book1, member1);
     }
 
 }
