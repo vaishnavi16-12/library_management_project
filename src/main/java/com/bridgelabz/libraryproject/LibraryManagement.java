@@ -19,5 +19,7 @@ public class LibraryManagement {
 
         member1.borrowBook(book1);
 
+        member1.returnBook( book1);
+
     }
 }

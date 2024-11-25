@@ -59,15 +59,25 @@ public class Member {
                 ", contactNumber='" + contactNumber + '\'' +
                 '}';
     }
-    public void borrowBook( Book book){
-        if (book.isAvailable()){
+    public void borrowBook( Book book) {
+        if (book.isAvailable()) {
             borrowedBook.add(book);
             book.updateAvailability(false);
-            System.out.println(name +   "borrowed:" + book.getTitle());
+            System.out.println(name + "borrowed:" + book.getTitle());
 
-        }else {
+        } else {
             System.out.println("Book is not available");
         }
+    }
 
+        public void returnBook(Book book ){
+            if ( borrowedBook.remove(book)){
+                book.updateAvailability(true);
+                System.out.println(name +   "returned :" + book.getTitle());
+
+            }else {
+                System.out.println("This book was not borrowed by "+ name);
+
+    }
     }
 }
