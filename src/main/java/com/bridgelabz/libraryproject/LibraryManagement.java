@@ -13,6 +13,7 @@ public class LibraryManagement {
         library.addBook(book1);
         library.addBook(book2);
 
-        library.removeBook(book2);
+        Member member1 = new Member("M1","Vaishnavi","edfw35fg st","15465768");
+        library.registerMember(member1);
     }
 }
