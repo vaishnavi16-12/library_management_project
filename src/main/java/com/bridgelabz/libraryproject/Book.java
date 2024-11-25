@@ -1,7 +1,7 @@
 package com.bridgelabz.libraryproject;
 
 public class Book {
-    private  String title;
+    private String title;
     private String author;
     private String ISBN;
     private int publicationYear;
@@ -55,19 +55,18 @@ public class Book {
         isAvailable = available;
     }
 
-    public void updateAvailability(boolean status){
+    public void updateAvailability(boolean status) {
         this.isAvailable = status;
 
     }
 
-    @Override
-    public String toString() {
-        return "Book{" +
-                "title='" + title + '\'' +
+    public String getDetails() {
+        return "title='" + title + '\'' +
                 ", author='" + author + '\'' +
                 ", ISBN='" + ISBN + '\'' +
                 ", publicationYear=" + publicationYear +
-                ", isAvailable=" + isAvailable +
-                '}';
+                ", isAvailable=" + isAvailable;
     }
+
 }
+
