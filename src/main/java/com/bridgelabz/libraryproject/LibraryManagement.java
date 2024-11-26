@@ -52,8 +52,14 @@ public class LibraryManagement {
              Transaction transaction = new Transaction("T1",member1, book1, new Date());
 
         System.out.println("\nTransaction Details (Before return):");
+        System.out.println(transaction.getTransactionDetails());
 
         transaction.markAsReturned();
+
+        System.out.println("\nTransaction Details (After return):");
+        System.out.println(transaction.getTransactionDetails());
+
+
     }
 
 }
