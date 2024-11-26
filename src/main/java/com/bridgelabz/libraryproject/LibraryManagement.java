@@ -1,6 +1,7 @@
 package com.bridgelabz.libraryproject;
 
 
+import java.util.Date;
 import java.util.List;
 
 public class LibraryManagement {
@@ -46,6 +47,13 @@ public class LibraryManagement {
 
          librarian.receivedReturnBook(book1, member1);
              librarian.issueBook(book1, member1);
+
+
+             Transaction transaction = new Transaction("T1",member1, book1, new Date());
+
+        System.out.println("\nTransaction Details (Before return):");
+
+        transaction.markAsReturned();
     }
 
 }

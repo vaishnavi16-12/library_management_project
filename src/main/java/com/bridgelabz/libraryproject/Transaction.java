@@ -11,7 +11,7 @@ public class Transaction {
     private Date returnDate;
     private boolean isReturned;
 
-    public Transaction(String transactionId, Member member, Book book, Date issueDate, Date returnDate, boolean isReturned) {
+    public Transaction(String transactionId, Member member, Book book, Date issueDate) {
         this.transactionId = transactionId;
         this.member = member;
         this.book = book;
@@ -19,5 +19,14 @@ public class Transaction {
         this.returnDate = returnDate;
         this.isReturned = isReturned;
     }
+    public void markAsReturned(){
+        this.returnDate =new Date();
+        this.isReturned=true;
+        System.out.println("Transaction " + transactionId + ": Book \"" + book.getTitle() +
+                "\" has been marked as returned by " + member.getName() +
+                " on " + returnDate);
+
+    }
+
 
 }
