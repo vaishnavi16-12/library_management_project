@@ -28,4 +28,23 @@ public class Fine {
             System.out.println("No fine for " + member.getName() + ". Book returned on time.");
         }
     }
-}
+
+    public void  markAsPaid(){
+        if(this.amount >0 && ! this.isPaid){
+        this.isPaid=true;
+
+            System.out.println("Fine of ₹" + this.amount + " paid by " + member.getName());
+        } else if (this.isPaid) {
+            System.out.println("Fine is already paid.");
+        } else {
+            System.out.println("No fine to pay.");
+        }
+    }
+    public String getFineDetails() {
+        return "Fine ID: " + fineId + ", Member: " + member.getName() +
+                ", Amount: ₹" + amount + ", Issue Date: " + issueDate +
+                ", Is Paid: " + isPaid;
+    }
+
+        }
+

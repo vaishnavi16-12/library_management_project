@@ -77,6 +77,13 @@ public class LibraryManagement {
         fine.calculateFine(dueDate,returnDate);
 
 
+        System.out.println("\nFine Details(Before payment): ");
+        System.out.println(fine.getFineDetails());
+
+        fine.markAsPaid();
+
+        System.out.println("\nFine Details(After payment): ");
+        System.out.println(fine.getFineDetails());
 
 
 
