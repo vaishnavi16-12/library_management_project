@@ -1,6 +1,7 @@
 package com.bridgelabz.libraryproject;
 
 
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
@@ -58,6 +59,25 @@ public class LibraryManagement {
 
         System.out.println("\nTransaction Details (After return):");
         System.out.println(transaction.getTransactionDetails());
+
+
+        Date issueDate =new Date();
+        Fine fine= new Fine("M1", member1, issueDate);
+
+        Calendar calender = Calendar.getInstance();
+        calender.setTime(issueDate);
+
+        calender.add(calender.DATE, 5);
+        Date dueDate = calender.getTime();
+
+
+        calender.add(calender.DATE, 5);
+        Date returnDate = calender.getTime();
+
+        fine.calculateFine(dueDate,returnDate);
+
+
+
 
 
     }
